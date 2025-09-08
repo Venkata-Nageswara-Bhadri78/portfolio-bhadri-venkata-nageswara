@@ -18,64 +18,55 @@
             animation: fadeIn 1s ease-out forwards;
             opacity: 0;
         }
-
-        /* 1. The Container (Corrected Styling) */
         .scrolling-note-container {
             width: 100%;
-            background-color: #1e293b; /* bg-slate-800 */
+            background-color: #2563eb; /* bg-blue-600 */
             padding: 8px 0;
             overflow: hidden;
             white-space: nowrap;
         }
-
-        /* 2. The Scrolling Text (Corrected Styling) */
         .scrolling-text {
             display: inline-block;
             padding-left: 100%;
-            animation: scroll-left-to-right 20s linear infinite;
-            font-size: 1rem; /* Adjusted size for better fit */
-            color: #67e8f9; /* text-cyan-300 */
+            animation: scroll-left-to-right 25s linear infinite;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #ffffff; /* text-white */
         }
-
-        /* 3. The Animation Keyframes */
         @keyframes scroll-left-to-right {
-            0% {
-                transform: translateX(0%);
-            }
-            100% {
-                transform: translateX(-200%);
-            }
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-200%); }
         }
     </style>
 </head>
 
-<body class="bg-slate-900 text-slate-300">
-    <header class="bg-slate-800/50 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300" id="header">
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300" id="header">
         <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-cyan-400">Bhadri Venkata Nageswara</a>
+            <a href="#" class="text-xl font-bold text-blue-600">Bhadri Venkata Nageswara</a>
             <div class="hidden md:flex space-x-6 items-center">
-                <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
-                <a href="#experience" class="hover:text-cyan-400 transition-colors">Experience</a>
-                <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
-                <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
-                <a href="#contact" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition-transform transform hover:scale-105">Contact</a>
+                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+                <a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-blue-600 transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition-transform transform hover:scale-105">Contact</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden text-2xl">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#about" class="block py-2 hover:text-cyan-400">About</a>
-            <a href="#experience" class="block py-2 hover:text-cyan-400">Experience</a>
-            <a href="#projects" class="block py-2 hover:text-cyan-400">Projects</a>
-            <a href="#skills" class="block py-2 hover:text-cyan-400">Skills</a>
-            <a href="#contact" class="block mt-2 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full text-center">Contact</a>
+            <a href="#about" class="block py-2 hover:text-blue-600">About</a>
+            <a href="#experience" class="block py-2 hover:text-blue-600">Experience</a>
+            <a href="#projects" class="block py-2 hover:text-blue-600">Projects</a>
+            <a href="#skills" class="block py-2 hover:text-blue-600">Skills</a>
+            <a href="#contact" class="block mt-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-center">Contact</a>
         </div>
     </header>
 
     <div class="scrolling-note-container">
         <p class="scrolling-text">
-            This is a sample portfolio website. More projects and sections will be added soon...
+            Seeking opportunities to build innovative and efficient software solutions. Let's connect and create something amazing together!
         </p>
     </div>
 
@@ -83,226 +74,302 @@
 
         <section id="about" class="flex flex-col md:flex-row items-center min-h-[80vh]">
             <div class="md:w-1/2 text-center md:text-left animate-in" style="--delay: 100ms">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
-                    Hi, I'm <span class="text-cyan-400">Bhadri Venkata Nageswara</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                    Hi, I'm <span class="text-blue-600">Bhadri Venkata Nageswara</span>
                 </h1>
-                <h2 class="text-2xl md:text-3xl font-semibold text-slate-400 mb-6">Software Developer Engineer (SDE)</h2>
-                <p class="mb-8 text-lg">
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">Software Developer Engineer (SDE)</h2>
+                <p class="mb-8 text-lg text-gray-700">
                     A passionate developer with a knack for building elegant solutions and a strong foundation in mathematics and computer science. I thrive in collaborative environments, turning complex problems into clean, efficient code.
                 </p>
-                <div class="flex items-center justify-center md:justify-start space-x-6 mb-8 text-2xl text-slate-400">
-                    <a href="https://linkedin.com/in/b-venkata-nageswara-7a0893264" target="_blank" aria-label="LinkedIn" class="hover:text-cyan-400 transition-colors"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Venkata-Nageswara-Bhadri78" target="_blank" aria-label="GitHub" class="hover:text-cyan-400 transition-colors"><i class="fab fa-github"></i></a>
-                    <a href="https://gitlab.com/venkata_nageswara_bhadri" target="_blank" aria-label="GitLab" class="hover:text-cyan-400 transition-colors"><i class="fab fa-gitlab"></i></a>
-                    <a href="mailto:venkatanageswarabhadri12@gmail.com" aria-label="Email" class="hover:text-cyan-400 transition-colors"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+919391692334" aria-label="Phone" class="hover:text-cyan-400 transition-colors"><i class="fas fa-phone"></i></a>
+                <div class="flex items-center justify-center md:justify-start space-x-6 mb-8 text-2xl text-gray-500">
+                    <a href="https://linkedin.com/in/b-venkata-nageswara-7a0893264" target="_blank" aria-label="LinkedIn" class="hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Venkata-Nageswara-Bhadri78" target="_blank" aria-label="GitHub" class="hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
+                    <a href="https://gitlab.com/venkata_nageswara_bhadri" target="_blank" aria-label="GitLab" class="hover:text-blue-600 transition-colors"><i class="fab fa-gitlab"></i></a>
+                    <a href="mailto:venkatanageswarabhadri12@gmail.com" aria-label="Email" class="hover:text-blue-600 transition-colors"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+919391692334" aria-label="Phone" class="hover:text-blue-600 transition-colors"><i class="fas fa-phone"></i></a>
                 </div>
-                <a href="#projects" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 inline-block">View My Work</a>
+                <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 inline-block">View My Work</a>
             </div>
             <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center animate-in" style="--delay: 200ms">
-                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 p-1 shadow-2xl shadow-cyan-500/20">
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 p-1 shadow-2xl shadow-blue-500/30">
                     <img src="profilephoto.jpg" alt="Bhadri Venkata Nageswara" class="rounded-full w-full h-full object-cover">
                 </div>
             </div>
         </section>
 
         <section id="experience" class="py-20">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white animate-in">Work Experience</h2>
-            <div class="relative border-l-2 border-cyan-500/30">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 animate-in">Work Experience</h2>
+            <div class="relative border-l-2 border-blue-500/30">
                 <div class="mb-12 pl-10 relative experience-item">
-                    <div class="absolute -left-3 top-1 w-6 h-6 bg-slate-900 border-4 border-cyan-500 rounded-full"></div>
-                    <p class="text-sm text-cyan-400 font-semibold">Feb 2025 - July 2025</p>
-                    <h3 class="text-xl font-bold text-white mt-1">Software Developer Engineer (SDE)</h3>
-                    <p class="text-md text-slate-400 mb-3">MountBlue Technologies, Bengaluru - Full Time</p>
-                    <p class="text-slate-300">Completed rigorous full-stack development training, working on real-world projects in collaborative, agile teams. Gained hands-on experience with modern web technologies and deployment workflows.</p>
+                    <div class="absolute -left-3 top-1 w-6 h-6 bg-gray-50 border-4 border-blue-500 rounded-full"></div>
+                    <p class="text-sm text-blue-600 font-semibold">Feb 2025 - July 2025 (6 months) - Full Time</p>
+                    <h3 class="text-xl font-bold text-gray-900 mt-1">Software Developer Engineer</h3>
+                    <p class="text-md text-gray-600 mb-3">MountBlue Technologies, Bengaluru - Full Time</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Completed rigorous full-stack development training, working on real-world projects in collaborative, agile teams.</li>
+                        <li>Built responsive web applications using React.js, JavaScript, HTML5, CSS3, and Tailwind CSS.</li>
+                        <li>Gained hands-on experience with Git, GitHub, GitLab, and CLI for version control.</li>
+                        <li>Deployed projects using Vercel, gaining exposure to modern deployment workflows.</li>
+                    </ul>
                 </div>
                 <div class="mb-12 pl-10 relative experience-item">
-                    <div class="absolute -left-3 top-1 w-6 h-6 bg-slate-900 border-4 border-cyan-500 rounded-full"></div>
-                    <p class="text-sm text-cyan-400 font-semibold">July 2024 - January 2025</p>
-                    <h3 class="text-xl font-bold text-white mt-1">LLM Reviewer, Prompt Writer, Response Evaluator</h3>
-                    <p class="text-md text-slate-400 mb-3">Outlier.ai - Freelance</p>
-                    <p class="text-slate-300">Created and refined prompts for large language models, focusing on computer science and mathematics to ensure technical accuracy and contextual relevance.</p>
+                    <div class="absolute -left-3 top-1 w-6 h-6 bg-gray-50 border-4 border-blue-500 rounded-full"></div>
+                    <p class="text-sm text-blue-600 font-semibold">Oct 2024 - Dec 2024</p>
+                    <h3 class="text-xl font-bold text-gray-900 mt-1">LLM Reviewer, Prompt Writer, Response Evaluator</h3>
+                    <p class="text-md text-gray-600 mb-3">Outlier.ai - Freelance</p>
+                    <p class="text-gray-700">Created and refined prompts for large language models, focusing on computer science and mathematics to ensure technical accuracy and contextual relevance.</p>
                 </div>
-                <div class="mb-12 pl-10 relative experience-item">
-                    <div class="absolute -left-3 top-1 w-6 h-6 bg-slate-900 border-4 border-cyan-500 rounded-full"></div>
-                    <p class="text-sm text-cyan-400 font-semibold">Nov 2024 - Feb 2025</p>
-                    <h3 class="text-xl font-bold text-white mt-1">Problem Creator and Solver</h3>
-                    <p class="text-md text-slate-400 mb-3">Shipd.ai (by DataCurve) - Freelance</p>
-                    <p class="text-slate-300">Designed and developed complex problems and solutions for the Shipd platform, contributing to educational content and enhancing user engagement.</p>
+                <div class="pl-10 relative experience-item">
+                    <div class="absolute -left-3 top-1 w-6 h-6 bg-gray-50 border-4 border-blue-500 rounded-full"></div>
+                    <p class="text-sm text-blue-600 font-semibold">Nov 2024 - Feb 2025</p>
+                    <h3 class="text-xl font-bold text-gray-900 mt-1">Problem Setter and Solver</h3>
+                    <p class="text-md text-gray-600 mb-3">Shipd.ai (by DataCurve) - Freelance</p>
+                    <p class="text-gray-700">Designed and developed complex problems and solutions for the Shipd platform, contributing to educational content and enhancing user engagement.</p>
                 </div>
-                 <div class="pl-10 relative experience-item">
-                    <div class="absolute -left-3 top-1 w-6 h-6 bg-slate-900 border-4 border-cyan-500 rounded-full"></div>
-                    <p class="text-sm text-cyan-400 font-semibold">Mar 2023 - Sep 2023</p>
-                    <h3 class="text-xl font-bold text-white mt-1">Subject Matter Expert - Mathematics</h3>
-                    <p class="text-md text-slate-400 mb-3">Chegg Expert - Freelance</p>
-                    <p class="text-slate-300">Solved and explained a wide range of advanced Calculus problems, ensuring clarity, accuracy, and high-quality standards.</p>
+            </div>
+        </section>
+
+        <section id="education" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 animate-in">Education</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 stagger-in">
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
+                    <p class="text-sm text-gray-500">2020 - 2024</p>
+                    <h3 class="text-xl font-bold text-gray-900">B.Tech in Electronics and Communication Engineering</h3>
+                    <p class="text-md text-gray-600">Sri Venkateswara College of Engineering, Tirupati</p>
+                    <p class="text-lg font-semibold text-blue-600 mt-2">CGPA: 9.14</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
+                    <p class="text-sm text-gray-500">2018 - 2020</p>
+                    <h3 class="text-xl font-bold text-gray-900">Intermediate (mathematics Physics Chemistry)</h3>
+                    <p class="text-md text-gray-600">Sri Chaitanya Junior College, Tirupati</p>
+                    <p class="text-lg font-semibold text-blue-600 mt-2">Percentage: 94.8%</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
+                    <p class="text-sm text-gray-500">Until 2018</p>
+                    <h3 class="text-xl font-bold text-gray-900">Secondary School Eduation (10th)</h3>
+                    <p class="text-md text-gray-600">Sarada High School, T.Sundupalli</p>
+                    <p class="text-lg font-semibold text-blue-600 mt-2">CGPA: 9.2</p>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="py-20">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white animate-in">Projects</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 animate-in">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-in">
-                <div class="bg-slate-800 rounded-lg p-6 shadow-lg hover:shadow-cyan-500/20 transition-shadow transform hover:-translate-y-1">
-                    <h3 class="text-xl font-bold text-cyan-400 mb-2">Trello Clone – Task Management Web App</h3>
-                    <p class="text-slate-400 mb-4">Built a Trello-inspired task management app using React with dynamic boards, lists, and cards, featuring drag-and-drop functionality for seamless task organization.</p>
+                <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-lg hover:shadow-blue-500/20 transition-all transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">React Movies Application (TMDB API) - Real Time </h3>
+                    <p class="text-gray-600 mb-4">Developed a responsive web app to browse popular, top-rated, and trending movies, TV shows, and actors using the TMDb API, featuring dynamic filters and reusable components.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
-                        <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
-                        <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
-                        <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">DOM</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Material-UI</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">TMDb API</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML & CSS</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React Context</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">API Interaction</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React Router</span>
                     </div>
-                    <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold">Ongoing - Will update the link once completed <i class="fas fa-arrow-right ml-1"></i></a>
+                    <a href="https://react-movie-app-tmdb-5vi02eaeb.vercel.app/" class="text-blue-600 hover:text-blue-800 font-semibold">View Live Demo <i class="fas fa-arrow-right ml-1"></i></a>
+                    <div class="text-sm ">Issue with Opening ? <a href="https://drive.google.com/file/d/1su0ktDFaxc6XMUUxihhFbuCcAIy3g6IA/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">Click Here </a> For Video</div>
+
                 </div>
-                <div class="bg-slate-800 rounded-lg p-6 shadow-lg hover:shadow-cyan-500/20 transition-shadow transform hover:-translate-y-1">
-                    <h3 class="text-xl font-bold text-cyan-400 mb-2">Interactive Website for Student-Teacher Interaction</h3>
-                    <p class="text-slate-400 mb-4">Designed and developed an interactive website facilitating seamless communication between students and teachers. Enabled student registration, course enrollment, and teacher course management.</p>
+                <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-lg hover:shadow-blue-500/20 transition-all transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">Rest API Countries App - Real Time</h3>
+                    <p class="text-gray-600 mb-4">A responsive React app that fetches and displays country data from a REST API. Implemented search, filter, sorting, and dynamic routing for detailed views.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Java</span>
-                        <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">MySQL</span>
-                        <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JSP</span>
-                        <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Servlets</span>
-                        <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JDBC</span>
-                        <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tomcat Server</span>
-                        <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">XML</span>
-                        <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
-                        <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Rest Countries API</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React Router</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">REST API</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML & CSS</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">tailwindcss</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React Context</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">API Interaction</span>
                     </div>
-                    <a href="https://github.com/Venkata-Nageswara-Bhadri78/Teacher_Student_Interactive_Website" class="text-cyan-400 hover:text-cyan-300 font-semibold">View Github Link <i class="fas fa-arrow-right ml-1"></i></a>
+                    <a href="https://rest-countries-gules-five.vercel.app/" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">View Live Demo <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-lg hover:shadow-blue-500/20 transition-all transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">Interactive Website for Student-Teacher Interaction</h3>
+                    <p class="text-gray-600 mb-4">Designed and developed an interactive website facilitating seamless communication between students and teachers. Enabled student registration, course enrollment, and teacher course management.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Java</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">MySQL</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">JSP</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Servlets</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">JDBC</span>
+                    </div>
+                    <a href="https://github.com/Venkata-Nageswara-Bhadri78/Teacher_Student_Interactive_Website" class="text-blue-600 hover:text-blue-800 font-semibold">View on GitHub <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-lg hover:shadow-blue-500/20 transition-all transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">Memory Game - Simple (using JS DOM only)</h3>
+                    <p class="text-gray-600 mb-4">Developed a browser-based Memory Game using HTML, CSS, TALENT CSS, and JavaScript DOM manipulation, enhancing interactive UI and user engagement.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">tailwindcss</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">JS DOM</span>
+                    </div>
+                    <a href="https://memory-game-js-dom.vercel.app/" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">View Live Demo <i class="fas fa-arrow-right ml-1"></i></a>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="py-20">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white animate-in">Skills</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 animate-in">Technical Skills</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center stagger-in">
-                <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fab fa-java text-4xl mb-2 text-cyan-400"></i><span>Java</span>
+                <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fab fa-java text-4xl mb-2 text-blue-600"></i><span>Java</span>
                 </div>
-                 <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fab fa-js-square text-4xl mb-2 text-cyan-400"></i><span>JavaScript</span>
+                <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fab fa-js-square text-4xl mb-2 text-blue-600"></i><span>JavaScript (ES6)</span>
                 </div>
-                 <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fab fa-react text-4xl mb-2 text-cyan-400"></i><span>React</span>
+                <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fab fa-react text-4xl mb-2 text-blue-600"></i><span>React</span>
                 </div>
-                <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fab fa-node-js text-4xl mb-2 text-cyan-400"></i><span>Node.js</span>
+                <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fab fa-node-js text-4xl mb-2 text-blue-600"></i><span>Node.js</span>
                 </div>
-                 <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fab fa-html5 text-4xl mb-2 text-cyan-400"></i><span>HTML5</span>
+                <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fas fa-infinity text-4xl mb-2 text-blue-600"></i><span>DSA</span>
                 </div>
-                <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fab fa-css3-alt text-4xl mb-2 text-cyan-400"></i><span>CSS3</span>
+                <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fas fa-database text-4xl mb-2 text-blue-600"></i><span>MySQL</span>
                 </div>
-                <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fas fa-palette text-4xl mb-2 text-cyan-400"></i><span>Tailwind CSS</span>
+                <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fab fa-html5 text-4xl mb-2 text-blue-600"></i><span>HTML5</span>
                 </div>
-                <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fas fa-database text-4xl mb-2 text-cyan-400"></i><span>MySQL</span>
+                <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fab fa-css3-alt text-4xl mb-2 text-blue-600"></i><span>CSS3</span>
                 </div>
-                <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fab fa-git-alt text-4xl mb-2 text-cyan-400"></i><span>Git</span>
+                <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fas fa-palette text-4xl mb-2 text-blue-600"></i><span>Tailwind CSS</span>
                 </div>
-                 <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fas fa-terminal text-4xl mb-2 text-cyan-400"></i><span>CLI</span>
+                <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fab fa-git-alt text-4xl mb-2 text-blue-600"></i><span>Git & GitHub</span>
                 </div>
-                <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fas fa-infinity text-4xl mb-2 text-cyan-400"></i><span>DSA</span>
+                <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fas fa-server text-4xl mb-2 text-blue-600"></i><span>Advanced Java</span>
                 </div>
-                <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fas fa-brain text-4xl mb-2 text-cyan-400"></i><span>AI & Prompt</span>
+                <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fas fa-brain text-4xl mb-2 text-blue-600"></i><span>Prompt Engineering</span>
                 </div>
-                <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fas fa-code text-4xl mb-2 text-cyan-400"></i><span>C Language</span>
+                 <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fas fa-terminal text-4xl mb-2 text-blue-600"></i><span>CLI</span>
                 </div>
-                <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fas fa-server text-4xl mb-2 text-cyan-400"></i><span>Advanced Java</span>
+                 <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fas fa-code text-4xl mb-2 text-blue-600"></i><span>C Language</span>
                 </div>
-                <div class="skill-item bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:bg-slate-700">
-                    <i class="fas fa-cloud-upload-alt text-4xl mb-2 text-cyan-400"></i><span>Vercel</span>
+                <div class="skill-item bg-white p-4 rounded-lg border border-gray-200 flex flex-col items-center justify-center transition-transform transform hover:scale-110 hover:shadow-md">
+                    <i class="fas fa-cloud-upload-alt text-4xl mb-2 text-blue-600"></i><span>Vercel</span>
                 </div>
             </div>
         </section>
 
         <section id="certifications" class="py-20">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white animate-in">Certifications</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-in">
-                <a href="https://drive.google.com/file/d/1k_UbaR0k8QDkEpGpWx1WP7zv_kl7Dhyb/view" target="_blank" class="bg-slate-800 rounded-lg p-6 group hover:bg-cyan-900/50 transition-colors">
-                    <h3 class="text-lg font-bold text-slate-300 group-hover:text-cyan-300">Infosys Certification on Java Fundamentals</h3>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 animate-in">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-in">
+                <a href="https://drive.google.com/file/d/1k_UbaR0k8QDkEpGpWx1WP7zv_kl7Dhyb/view" target="_blank" class="bg-white rounded-lg p-6 group hover:bg-blue-50 border border-gray-200 transition-colors">
+                    <h3 class="text-lg font-bold text-gray-800 group-hover:text-blue-600">Infosys: Java Fundamentals</h3>
                 </a>
-                <a href="https://drive.google.com/file/d/1r4M4-jDn630voZ-TfvJi7LVu7AfslItD/view" target="_blank" class="bg-slate-800 rounded-lg p-6 group hover:bg-cyan-900/50 transition-colors">
-                    <h3 class="text-lg font-bold text-slate-300 group-hover:text-cyan-300">NPTEL Certification on Java</h3>
+                <a href="https://drive.google.com/file/d/1r4M4-jDn630voZ-TfvJi7LVu7AfslItD/view" target="_blank" class="bg-white rounded-lg p-6 group hover:bg-blue-50 border border-gray-200 transition-colors">
+                    <h3 class="text-lg font-bold text-gray-800 group-hover:text-blue-600">NPTEL: Programming in Java</h3>
                 </a>
-                <a href="https://www.hackerrank.com/profile/venkatanageswar1" target="_blank" class="bg-slate-800 rounded-lg p-6 group hover:bg-cyan-900/50 transition-colors">
-                    <h3 class="text-lg font-bold text-slate-300 group-hover:text-cyan-300">HackerRank - Java, Problem Solving, SQL</h3>
-                </a>
-                 <a href="https://drive.google.com/file/d/1sQgdx3Sv7X6ZAXTthXc167X_MHBDerGu/view?usp=sharing" target="_blank" class="bg-slate-800 rounded-lg p-6 group hover:bg-cyan-900/50 transition-colors">
-                    <h3 class="text-lg font-bold text-slate-300 group-hover:text-cyan-300">Chegg Expert Work Experience Certificate</h3>
+                <a href="https://www.hackerrank.com/profile/venkatanageswar1" target="_blank" class="bg-white rounded-lg p-6 group hover:bg-blue-50 border border-gray-200 transition-colors">
+                    <h3 class="text-lg font-bold text-gray-800 group-hover:text-blue-600">HackerRank: Java, SQL, Problem Solving</h3>
                 </a>
             </div>
         </section>
 
         <section id="achievements" class="py-20">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white animate-in">Achievements</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 animate-in">Achievements</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center stagger-in">
-                <a href="https://leetcode.com/u/Venkata_Nageswara_Bhadri/" target="_blank" class="block bg-slate-800 p-6 rounded-lg transition-transform transform hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-500/20">
-                    <i class="fas fa-keyboard text-4xl mb-3 text-cyan-400"></i>
-                    <p class="text-2xl font-bold text-white">170+</p>
-                    <p class="text-slate-400">Problems Solved on LeetCode</p>
+                <a href="https://leetcode.com/u/Venkata_Nageswara_Bhadri/" target="_blank" class="block bg-white p-6 rounded-lg border border-gray-200 transition-transform transform hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20">
+                    <i class="fas fa-keyboard text-4xl mb-3 text-blue-600"></i>
+                    <p class="text-3xl font-bold text-gray-900">185+</p>
+                    <p class="text-gray-600">Problems Solved on LeetCode</p>
                 </a>
-                <a href="https://www.geeksforgeeks.org/user/venkatanageswj2f2/" target="_blank" class="block bg-slate-800 p-6 rounded-lg transition-transform transform hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-500/20">
-                    <i class="fas fa-laptop-code text-4xl mb-3 text-cyan-400"></i>
-                    <p class="text-2xl font-bold text-white">90+</p>
-                    <p class="text-slate-400">Problems Solved on GeeksforGeeks</p>
+                <a href="https://www.geeksforgeeks.org/user/venkatanageswj2f2/" target="_blank" class="block bg-white p-6 rounded-lg border border-gray-200 transition-transform transform hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20">
+                    <i class="fas fa-laptop-code text-4xl mb-3 text-blue-600"></i>
+                    <p class="text-3xl font-bold text-gray-900">90+</p>
+                    <p class="text-gray-600">Problems Solved on GeeksforGeeks</p>
                 </a>
-                <a href="https://www.naukri.com/campus/certificates/achievement/v0/66eaaabf5abe131f423dfe89?utm_source=certificate&utm_medium=copy&utm_campaign=66eaaabf5abe131f423dfe89" target="_blank" class="block bg-slate-800 p-6 rounded-lg transition-transform transform hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-500/20">
-                    <i class="fas fa-trophy text-4xl mb-3 text-cyan-400"></i>
-                    <p class="text-2xl font-bold text-white">#72</p>
-                    <p class="text-slate-400">Rank in Naukri CodeQuest</p>
+                <a href="https://www.naukri.com/campus/certificates/achievement/v0/66eaaabf5abe131f423dfe89" target="_blank" class="block bg-white p-6 rounded-lg border border-gray-200 transition-transform transform hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20">
+                    <i class="fas fa-trophy text-4xl mb-3 text-blue-600"></i>
+                    <p class="text-3xl font-bold text-gray-900">#72</p>
+                    <p class="text-gray-600">Rank in Naukri CodeQuest</p>
                 </a>
-            </div>
-        </section>
-
-        <section id="languages" class="py-20 bg-slate-900">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white animate-in">Languages</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center stagger-in max-w-4xl mx-auto">
-                <div class="bg-slate-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-bold text-white mb-2">Telugu</h3>
-                    <p class="text-cyan-400 font-semibold mb-3">Native</p>
-                    <p class="text-xs text-slate-400">Read | Write | Speak</p>
-                </div>
-                <div class="bg-slate-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-bold text-white mb-2">Hindi</h3>
-                    <p class="text-cyan-400 font-semibold mb-3">Fluent</p>
-                    <p class="text-xs text-slate-400">Read | Write | Speak</p>
-                </div>
-                <div class="bg-slate-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-bold text-white mb-2">English</h3>
-                    <p class="text-cyan-400 font-semibold mb-3">Fluent</p>
-                    <p class="text-xs text-slate-400">Read | Write | Speak</p>
-                </div>
             </div>
         </section>
 
     </main>
 
-    <footer id="contact" class="bg-slate-900 border-t border-slate-800">
+    <footer id="contact" class="bg-white border-t border-gray-200">
         <div class="container mx-auto px-6 py-12 text-center">
-            <h2 class="text-2xl font-bold mb-4 text-white animate-in">Get In Touch</h2>
-            <p class="text-slate-400 mb-6 max-w-md mx-auto">
+            <h2 class="text-3xl font-bold mb-4 text-gray-900 animate-in">Get In Touch</h2>
+            <p class="text-gray-600 mb-8 max-w-md mx-auto">
                 I'm currently seeking new opportunities. Feel free to reach out for collaborations or just a friendly chat!
             </p>
-            <a href="mailto:venkatanageswarabhadri12@gmail.com" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 inline-block mb-8">
+            <a href="mailto:venkatanageswarabhadri12@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 inline-block mb-8">
                 Say Hello
             </a>
-            <div class="flex justify-center space-x-6 text-2xl text-slate-500">
-                <a href="https://linkedin.com/in/b-venkata-nageswara-7a0893264" target="_blank" class="hover:text-cyan-400 transition-colors"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Venkata-Nageswara-Bhadri78" target="_blank" class="hover:text-cyan-400 transition-colors"><i class="fab fa-github"></i></a>
+            <div class="flex justify-center space-x-6 text-2xl text-gray-500">
+                <a href="https://linkedin.com/in/b-venkata-nageswara-7a0893264" target="_blank" class="hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Venkata-Nageswara-Bhadri78" target="_blank" class="hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
+                <a href="https://gitlab.com/venkata_nageswara_bhadri" target="_blank" class="hover:text-blue-600 transition-colors"><i class="fab fa-gitlab"></i></a>
             </div>
-             <p class="text-sm text-slate-600 mt-8">&copy; 2025 Bhadri Venkata Nageswara. All Rights Reserved.</p>
+             <p class="text-sm text-gray-500 mt-8">&copy; 2025 Bhadri Venkata Nageswara. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('bg-white', 'shadow-md');
+                    header.classList.remove('bg-white/80');
+                } else {
+                    header.classList.remove('bg-white', 'shadow-md');
+                    header.classList.add('bg-white/80');
+                }
+            });
+
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.classList.contains('stagger-in')) {
+                            const children = entry.target.querySelectorAll(':scope > *');
+                            children.forEach((child, index) => {
+                                child.style.animationDelay = `${index * 100}ms`;
+                                child.classList.add('fade-in');
+                            });
+                        } else {
+                            entry.target.classList.add('fade-in');
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            // Observe elements with animation classes
+            document.querySelectorAll('.animate-in, .stagger-in, .experience-item').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>
